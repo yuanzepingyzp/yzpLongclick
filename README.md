@@ -6,12 +6,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body ng-app="app">
 		<button yzp-longclick="doSome()" >mybutton</button>
-		<script type="text/javascript" src="angular.js"></script>
-		<script type="text/javascript" src="yzpLongclick.js"></script>
+		<script type="text/javascript" src="angular.js"></script>//add angularjs file
+		<script type="text/javascript" src="yzpLongclick.js"></script>//add yzpLongclick.js file
 	</body>
 </html>
 ```
