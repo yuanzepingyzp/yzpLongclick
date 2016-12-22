@@ -1,0 +1,24 @@
+var yzpLongclick=angular.module("app",[]);
+yzpLongclick.directive("yzpLongclick",function($timeout){
+	return{
+		restrict:'A',
+		link:function($scope,$elm,$attrs){
+			$elm.bind("mousedown",function(){
+				$scope.longClick=true;
+				$timeout(function(){
+					if($scope.longClick){
+						$scope.$apply(function(){
+							$scope.$eval($attrs.yzpLongclick);/*执行指令中的函数*/						
+});
+					}
+				},600);
+			});
+			$elm.bind("mousemove",function(){
+				$scope.longClick=false;
+			});
+			$elm.bind("mouseup",function(){
+				$scope.longClick=false;
+			});
+		}
+	}
+})
